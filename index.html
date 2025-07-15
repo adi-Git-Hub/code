@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmetic Safety Chatbot for Babies & Children</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* (Your entire CSS code here, unchanged for brevity) */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar & Chat layout (unchanged) -->
+  </div>
+
+  <script>
+    const chatMessages = document.getElementById('chat-messages');
+    const userInput = document.getElementById('user-input');
+
+    const safetyData = {
+      babyUnsafe: [
+        {
+          name: "Phthalates",
+          aliases: ["dibutyl phthalate", "DBP", "diethyl phthalate", "DEP"],
+          risk: "Hormone disruption, developmental issues",
+          sources: ["EWG", "AAP"]
+        },
+        {
+          name: "Formaldehyde",
+          aliases: ["formalin", "methyl aldehyde"],
+          risk: "Carcinogen, skin irritation",
+          sources: ["FDA", "WHO"]
+        },
+        {
+          name: "Parabens",
+          aliases: ["methylparaben", "propylparaben", "butylparaben"],
+          risk: "Endocrine disruption, skin irritation",
+          sources: ["FDA", "EU Commission"]
+        },
+        {
+          name: "Fragrance",
+          aliases: ["parfum", "fragrance", "perfume"],
+          risk: "Allergic reactions, respiratory issues",
+          sources: ["AAP", "AAD"]
+        }
+      ],
+      under18Unsafe: [
+        {
+          name: "Retinoids",
+          aliases: ["retinol", "retinyl palmitate", "tretinoin"],
+          risk: "Skin thinning, photosensitivity",
+          sources: ["AAD"]
+        },
+        {
+          name: "High-concentration AHAs/BHAs",
+          aliases: ["glycolic acid >10%", "salicylic acid >2%"],
+          risk: "Skin barrier damage, irritation",
+          sources: ["SID"]
+        },
+        {
+          name: "Benzoyl Peroxide >2.5%",
+          aliases: ["benzoyl peroxide high", "BP high"],
+          risk: "Severe dryness, irritation",
+          sources: ["AAD"]
+        },
+        {
+          name: "Alcohol Denat",
+          aliases: ["denatured alcohol", "SD alcohol"],
+          risk: "Skin barrier disruption, dryness",
+          sources: ["EWG"]
+        }
+      ]
+    };
+
+    const productDB = [
+      {
+        name: "Johnson's Baby Shampoo",
+        ingredients: "Water, Cocamidopropyl Betaine, PEG-80 Sorbitan Laurate, Sodium Trideceth Sulfate, Fragrance, Tetrasodium EDTA, Citric Acid, Sodium Chloride, Sodium Benzoate, Yellow 5, Lavender Extract.",
+        safeFor: "Babies"
+      },
+      {
+        name: "CeraVe Baby Moisturizing Cream",
+        ingredients: "Water, Glycerin, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Cetyl Alcohol, Ceteareth-20, Petrolatum, Dimethicone, Phenoxyethanol, Behentrimonium Methosulfate, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol, Hyaluronic Acid, Phytosphingosine, Sodium Lauroyl Lactylate, Carbomer, Xanthan Gum, Sodium Hydroxide.",
+        safeFor: "Babies, Children"
+      },
+      {
+        name: "Neutrogena Oil-Free Acne Wash",
+        ingredients: "Water, Salicylic Acid 2%, Cocamidopropyl Betaine, Sodium C14-16 Olefin Sulfonate, Glycerin, PEG-
